@@ -10,4 +10,4 @@
 * NOW [ONLY] SUPPORT ON MOBILE PHONE.
 
 ## Build
-* Use compression software compress to zip format and change file extensions to .theme,etc.(check the foldername to select the right one)
+* Use compression software compress to zip format and change file extensions to .theme,etc.(check the foldername)
