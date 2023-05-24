@@ -1,0 +1,623 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Lockscreen version="1" frameRate="30" screenWidth="1080"  chargeAnimTime="9" >
+    <Wallpaper/>
+    <Video name="unlock.mp4" x="0"  y="0" w="#screen_width" h="#screen_height" looping="true" src="unlock.mp4" scaleType="center_crop" isBackground="true" />
+    <Group name="quickUnlockercamera_picture">
+        <Image x="949"  y="#screen_height-2160+2037" w="100" h="100" align="left" alignV="top" src="com.huawei.camera.png"  />
+        <Button x="949"  y="#screen_height-2160+2037" w="100" h="100" >
+            <Trigger action="click" >
+                <IntentCommand action="android.media.action.STILL_IMAGE_CAMERA_SECURE"/>
+            </Trigger>
+        </Button>
+    </Group>
+    <Image x="120"  y="0" pivotX="50" pivotY="50" align="left" alignV="top" src="Logo.png" w="374" h="64" >
+    </Image>
+    <Unlocker name="unlocker" bounceInitSpeed="2000" bounceAcceleration="3000">
+        <StartPoint x="0"  y="0" w="#screen_width" h="#screen_height" >
+        </StartPoint>
+        <EndPoint x="-1000"  y="-200-#screen_height" w="#screen_width+1000" h="#screen_height" >
+        </EndPoint>
+    </Unlocker>
+    <Image name="step_picture" x="57"  y="#screen_height-2160+2069" w="76" h="76" pivotX="0" pivotY="0" src="step_picture.png" align="left" alignV="top" >
+    </Image>
+    <Text name="step" x="152"  y="#screen_height-2160+2081" format="Step is: %d" paras="#steps_value" size="50" color="#322324"  />
+    <DateTime color="#E1BB76" size="45" x="120"  y="543"  />
+    <Group name="clock_time_image">
+        <Image x="117"  y="200" w="96" h="156"   
+            src="time.png" srcid="int((#hour24)/10)" />
+        <Image x="232"  y="200" w="96" h="156"   
+                    src="time.png" srcid="int(#hour24%10)" />
+        <Image x="117"  y="360" w="96" h="156"   
+                    src="time.png" srcid="int(#minute/10)" />
+        <Image x="232"  y="360" w="96" h="156"   
+                    src="time.png" srcid="int(#minute%10)" />
+    </Group>
+    <Button name="charge-button" x="0" y="0" w="1080" h="#screen_height">
+        <Trigger action="up"/>
+    </Button>
+    <Group name="charge" >
+        <Image name="charge-background" src="in_0.png" w="#screen_width" h="#screen_height" pivotX="0" pivotY="0"  
+        visibility="eq(#charge_anim,1)" >
+        </Image>
+        <Group name="wired-low" visibility="eq(#charge_anim,1)*eq(#charge_type_value,1)*le(#battery_level,10)" >
+            <Image x="#screen_width/6"  y="#screen_height/3" pivotX="354" pivotY="354" align="left" alignV="top" src="loop_0.png" w="708" h="708" >
+                <AlphaAnimation  repeat="1" delay="0" >
+                    <Alpha time="0" a="0" />
+                    <Alpha time="1000" a="255" />
+                </AlphaAnimation>
+                <SourcesAnimation  repeat="0" delay="0" >
+                    <Source time="0" src="loop_0.png" />
+                    <Source time="100" src="loop_1.png" />
+                    <Source time="120" src="loop_2.png" />
+                    <Source time="140" src="loop_3.png" />
+                    <Source time="160" src="loop_4.png" />
+                    <Source time="180" src="loop_5.png" />
+                    <Source time="200" src="loop_6.png" />
+                    <Source time="220" src="loop_7.png" />
+                    <Source time="240" src="loop_8.png" />
+                    <Source time="260" src="loop_9.png" />
+                    <Source time="280" src="loop_10.png" />
+                    <Source time="300" src="loop_11.png" />
+                    <Source time="320" src="loop_12.png" />
+                    <Source time="340" src="loop_13.png" />
+                    <Source time="360" src="loop_14.png" />
+                    <Source time="380" src="loop_15.png" />
+                    <Source time="400" src="loop_16.png" />
+                    <Source time="420" src="loop_17.png" />
+                    <Source time="440" src="loop_18.png" />
+                    <Source time="460" src="loop_19.png" />
+                    <Source time="480" src="loop_20.png" />
+                    <Source time="500" src="loop_21.png" />
+                    <Source time="520" src="loop_22.png" />
+                    <Source time="540" src="loop_23.png" />
+                    <Source time="560" src="loop_24.png" />
+                    <Source time="580" src="loop_25.png" />
+                    <Source time="600" src="loop_26.png" />
+                    <Source time="620" src="loop_27.png" />
+                    <Source time="640" src="loop_28.png" />
+                    <Source time="660" src="loop_29.png" />
+                    <Source time="680" src="loop_30.png" />
+                    <Source time="700" src="loop_31.png" />
+                    <Source time="720" src="loop_32.png" />
+                    <Source time="740" src="loop_33.png" />
+                    <Source time="760" src="loop_34.png" />
+                    <Source time="780" src="loop_35.png" />
+                    <Source time="800" src="loop_36.png" />
+                    <Source time="820" src="loop_37.png" />
+                    <Source time="840" src="loop_38.png" />
+                    <Source time="860" src="loop_39.png" />
+                    <Source time="880" src="loop_40.png" />
+                    <Source time="900" src="loop_41.png" />
+                    <Source time="920" src="loop_42.png" />
+                    <Source time="940" src="loop_43.png" />
+                    <Source time="960" src="loop_44.png" />
+                    <Source time="980" src="loop_45.png" />
+                    <Source time="1000" src="loop_46.png" />
+                    <Source time="1020" src="loop_47.png" />
+                    <Source time="1040" src="loop_48.png" />
+                    <Source time="1060" src="loop_49.png" />
+                    <Source time="1080" src="loop_50.png" />
+                    <Source time="1100" src="loop_51.png" />
+                    <Source time="1120" src="loop_52.png" />
+                    <Source time="1140" src="loop_53.png" />
+                    <Source time="1160" src="loop_54.png" />
+                    <Source time="1180" src="loop_55.png" />
+                    <Source time="1200" src="loop_56.png" />
+                    <Source time="1220" src="loop_57.png" />
+                    <Source time="1240" src="loop_58.png" />
+                    <Source time="1260" src="loop_59.png" />
+                </SourcesAnimation>
+                <SizeAnimation  repeat="1" delay="0" >
+                    <Size time="0" w="0" h="0" />
+                    <Size time="574" w="708" h="708" />
+                </SizeAnimation>
+            </Image>
+        </Group>
+        <Group name="wired-mid" visibility="eq(#charge_anim,1)*eq(#charge_type_value,1)*gt(#battery_level,10)*le(#battery_level,20)" >
+            <Image x="#screen_width/6"  y="#screen_height/3" pivotX="354" pivotY="354" align="left" alignV="top" src="loop_0.png" w="708" h="708" >
+                <AlphaAnimation  repeat="1" delay="0" >
+                    <Alpha time="0" a="0" />
+                    <Alpha time="1000" a="255" />
+                </AlphaAnimation>
+                <SourcesAnimation  repeat="0" delay="0" >
+                    <Source time="0" src="loop_0.png" />
+                    <Source time="100" src="loop_1.png" />
+                    <Source time="120" src="loop_2.png" />
+                    <Source time="140" src="loop_3.png" />
+                    <Source time="160" src="loop_4.png" />
+                    <Source time="180" src="loop_5.png" />
+                    <Source time="200" src="loop_6.png" />
+                    <Source time="220" src="loop_7.png" />
+                    <Source time="240" src="loop_8.png" />
+                    <Source time="260" src="loop_9.png" />
+                    <Source time="280" src="loop_10.png" />
+                    <Source time="300" src="loop_11.png" />
+                    <Source time="320" src="loop_12.png" />
+                    <Source time="340" src="loop_13.png" />
+                    <Source time="360" src="loop_14.png" />
+                    <Source time="380" src="loop_15.png" />
+                    <Source time="400" src="loop_16.png" />
+                    <Source time="420" src="loop_17.png" />
+                    <Source time="440" src="loop_18.png" />
+                    <Source time="460" src="loop_19.png" />
+                    <Source time="480" src="loop_20.png" />
+                    <Source time="500" src="loop_21.png" />
+                    <Source time="520" src="loop_22.png" />
+                    <Source time="540" src="loop_23.png" />
+                    <Source time="560" src="loop_24.png" />
+                    <Source time="580" src="loop_25.png" />
+                    <Source time="600" src="loop_26.png" />
+                    <Source time="620" src="loop_27.png" />
+                    <Source time="640" src="loop_28.png" />
+                    <Source time="660" src="loop_29.png" />
+                    <Source time="680" src="loop_30.png" />
+                    <Source time="700" src="loop_31.png" />
+                    <Source time="720" src="loop_32.png" />
+                    <Source time="740" src="loop_33.png" />
+                    <Source time="760" src="loop_34.png" />
+                    <Source time="780" src="loop_35.png" />
+                    <Source time="800" src="loop_36.png" />
+                    <Source time="820" src="loop_37.png" />
+                    <Source time="840" src="loop_38.png" />
+                    <Source time="860" src="loop_39.png" />
+                    <Source time="880" src="loop_40.png" />
+                    <Source time="900" src="loop_41.png" />
+                    <Source time="920" src="loop_42.png" />
+                    <Source time="940" src="loop_43.png" />
+                    <Source time="960" src="loop_44.png" />
+                    <Source time="980" src="loop_45.png" />
+                    <Source time="1000" src="loop_46.png" />
+                    <Source time="1020" src="loop_47.png" />
+                    <Source time="1040" src="loop_48.png" />
+                    <Source time="1060" src="loop_49.png" />
+                    <Source time="1080" src="loop_50.png" />
+                    <Source time="1100" src="loop_51.png" />
+                    <Source time="1120" src="loop_52.png" />
+                    <Source time="1140" src="loop_53.png" />
+                    <Source time="1160" src="loop_54.png" />
+                    <Source time="1180" src="loop_55.png" />
+                    <Source time="1200" src="loop_56.png" />
+                    <Source time="1220" src="loop_57.png" />
+                    <Source time="1240" src="loop_58.png" />
+                    <Source time="1260" src="loop_59.png" />
+                    <Source time="1280" src="loop_60.png" />
+                    <Source time="1300" src="loop_61.png" />
+                    <Source time="1320" src="loop_62.png" />
+                    <Source time="1340" src="loop_63.png" />
+                    <Source time="1360" src="loop_64.png" />
+                    <Source time="1380" src="loop_65.png" />
+                    <Source time="1400" src="loop_66.png" />
+                    <Source time="1420" src="loop_67.png" />
+                    <Source time="1440" src="loop_68.png" />
+                    <Source time="1460" src="loop_69.png" />
+                    <Source time="1480" src="loop_70.png" />
+                    <Source time="1500" src="loop_71.png" />
+                    <Source time="1520" src="loop_72.png" />
+                    <Source time="1540" src="loop_73.png" />
+                    <Source time="1560" src="loop_74.png" />
+                    <Source time="1580" src="loop_75.png" />
+                    <Source time="1600" src="loop_76.png" />
+                </SourcesAnimation>
+                <SizeAnimation  repeat="1" delay="0" >
+                    <Size time="0" w="0" h="0" />
+                    <Size time="574" w="708" h="708" />
+                </SizeAnimation>
+            </Image>
+        </Group>
+        <Group name="wired-high" visibility="eq(#charge_anim,1)*eq(#charge_type_value,1)*gt(#battery_level,20)" >
+            <Image x="#screen_width/6"  y="#screen_height/3" pivotX="354" pivotY="354" align="left" alignV="top" src="loop_0.png" w="708" h="708" >
+                <AlphaAnimation  repeat="1" delay="0" >
+                    <Alpha time="0" a="0" />
+                    <Alpha time="1000" a="255" />
+                </AlphaAnimation>
+                <SourcesAnimation  repeat="0" delay="0" >
+                    <Source time="0" src="loop_0.png" />
+                    <Source time="100" src="loop_1.png" />
+                    <Source time="120" src="loop_2.png" />
+                    <Source time="140" src="loop_3.png" />
+                    <Source time="160" src="loop_4.png" />
+                    <Source time="180" src="loop_5.png" />
+                    <Source time="200" src="loop_6.png" />
+                    <Source time="220" src="loop_7.png" />
+                    <Source time="240" src="loop_8.png" />
+                    <Source time="260" src="loop_9.png" />
+                    <Source time="280" src="loop_10.png" />
+                    <Source time="300" src="loop_11.png" />
+                    <Source time="320" src="loop_12.png" />
+                    <Source time="340" src="loop_13.png" />
+                    <Source time="360" src="loop_14.png" />
+                    <Source time="380" src="loop_15.png" />
+                    <Source time="400" src="loop_16.png" />
+                    <Source time="420" src="loop_17.png" />
+                    <Source time="440" src="loop_18.png" />
+                    <Source time="460" src="loop_19.png" />
+                    <Source time="480" src="loop_20.png" />
+                    <Source time="500" src="loop_21.png" />
+                    <Source time="520" src="loop_22.png" />
+                    <Source time="540" src="loop_23.png" />
+                    <Source time="560" src="loop_24.png" />
+                    <Source time="580" src="loop_25.png" />
+                    <Source time="600" src="loop_26.png" />
+                    <Source time="620" src="loop_27.png" />
+                    <Source time="640" src="loop_28.png" />
+                    <Source time="660" src="loop_29.png" />
+                    <Source time="680" src="loop_30.png" />
+                    <Source time="700" src="loop_31.png" />
+                    <Source time="720" src="loop_32.png" />
+                    <Source time="740" src="loop_33.png" />
+                    <Source time="760" src="loop_34.png" />
+                    <Source time="780" src="loop_35.png" />
+                    <Source time="800" src="loop_36.png" />
+                    <Source time="820" src="loop_37.png" />
+                    <Source time="840" src="loop_38.png" />
+                    <Source time="860" src="loop_39.png" />
+                    <Source time="880" src="loop_40.png" />
+                    <Source time="900" src="loop_41.png" />
+                    <Source time="920" src="loop_42.png" />
+                    <Source time="940" src="loop_43.png" />
+                    <Source time="960" src="loop_44.png" />
+                    <Source time="980" src="loop_45.png" />
+                    <Source time="1000" src="loop_46.png" />
+                    <Source time="1020" src="loop_47.png" />
+                    <Source time="1040" src="loop_48.png" />
+                    <Source time="1060" src="loop_49.png" />
+                    <Source time="1080" src="loop_50.png" />
+                    <Source time="1100" src="loop_51.png" />
+                    <Source time="1120" src="loop_52.png" />
+                    <Source time="1140" src="loop_53.png" />
+                    <Source time="1160" src="loop_54.png" />
+                    <Source time="1180" src="loop_55.png" />
+                    <Source time="1200" src="loop_56.png" />
+                    <Source time="1220" src="loop_57.png" />
+                    <Source time="1240" src="loop_58.png" />
+                    <Source time="1260" src="loop_59.png" />
+                    <Source time="1280" src="loop_60.png" />
+                    <Source time="1300" src="loop_61.png" />
+                    <Source time="1320" src="loop_62.png" />
+                    <Source time="1340" src="loop_63.png" />
+                    <Source time="1360" src="loop_64.png" />
+                    <Source time="1380" src="loop_65.png" />
+                    <Source time="1400" src="loop_66.png" />
+                    <Source time="1420" src="loop_67.png" />
+                    <Source time="1440" src="loop_68.png" />
+                    <Source time="1460" src="loop_69.png" />
+                    <Source time="1480" src="loop_70.png" />
+                    <Source time="1500" src="loop_71.png" />
+                    <Source time="1520" src="loop_72.png" />
+                    <Source time="1540" src="loop_73.png" />
+                    <Source time="1560" src="loop_74.png" />
+                    <Source time="1580" src="loop_75.png" />
+                    <Source time="1600" src="loop_76.png" />
+                </SourcesAnimation>
+                <SizeAnimation  repeat="1" delay="0" >
+                    <Size time="0" w="0" h="0" />
+                    <Size time="574" w="708" h="708" />
+                </SizeAnimation>
+            </Image>
+        </Group>
+        <Group name="wireless-low" visibility="eq(#charge_anim,1)*eq(#charge_type_value,2)*le(#battery_level,10)" >
+            <Image x="#screen_width/6"  y="#screen_height/3" pivotX="354" pivotY="354" align="left" alignV="top" src="loop_0.png" w="708" h="708" >
+                <AlphaAnimation  repeat="1" delay="0" >
+                    <Alpha time="0" a="0" />
+                    <Alpha time="1000" a="255" />
+                </AlphaAnimation>
+                <SourcesAnimation  repeat="0" delay="0" >
+                    <Source time="0" src="loop_0.png" />
+                    <Source time="100" src="loop_1.png" />
+                    <Source time="120" src="loop_2.png" />
+                    <Source time="140" src="loop_3.png" />
+                    <Source time="160" src="loop_4.png" />
+                    <Source time="180" src="loop_5.png" />
+                    <Source time="200" src="loop_6.png" />
+                    <Source time="220" src="loop_7.png" />
+                    <Source time="240" src="loop_8.png" />
+                    <Source time="260" src="loop_9.png" />
+                    <Source time="280" src="loop_10.png" />
+                    <Source time="300" src="loop_11.png" />
+                    <Source time="320" src="loop_12.png" />
+                    <Source time="340" src="loop_13.png" />
+                    <Source time="360" src="loop_14.png" />
+                    <Source time="380" src="loop_15.png" />
+                    <Source time="400" src="loop_16.png" />
+                    <Source time="420" src="loop_17.png" />
+                    <Source time="440" src="loop_18.png" />
+                    <Source time="460" src="loop_19.png" />
+                    <Source time="480" src="loop_20.png" />
+                    <Source time="500" src="loop_21.png" />
+                    <Source time="520" src="loop_22.png" />
+                    <Source time="540" src="loop_23.png" />
+                    <Source time="560" src="loop_24.png" />
+                    <Source time="580" src="loop_25.png" />
+                    <Source time="600" src="loop_26.png" />
+                    <Source time="620" src="loop_27.png" />
+                    <Source time="640" src="loop_28.png" />
+                    <Source time="660" src="loop_29.png" />
+                    <Source time="680" src="loop_30.png" />
+                    <Source time="700" src="loop_31.png" />
+                    <Source time="720" src="loop_32.png" />
+                    <Source time="740" src="loop_33.png" />
+                    <Source time="760" src="loop_34.png" />
+                    <Source time="780" src="loop_35.png" />
+                    <Source time="800" src="loop_36.png" />
+                    <Source time="820" src="loop_37.png" />
+                    <Source time="840" src="loop_38.png" />
+                    <Source time="860" src="loop_39.png" />
+                    <Source time="880" src="loop_40.png" />
+                    <Source time="900" src="loop_41.png" />
+                    <Source time="920" src="loop_42.png" />
+                    <Source time="940" src="loop_43.png" />
+                    <Source time="960" src="loop_44.png" />
+                    <Source time="980" src="loop_45.png" />
+                    <Source time="1000" src="loop_46.png" />
+                    <Source time="1020" src="loop_47.png" />
+                    <Source time="1040" src="loop_48.png" />
+                    <Source time="1060" src="loop_49.png" />
+                    <Source time="1080" src="loop_50.png" />
+                    <Source time="1100" src="loop_51.png" />
+                    <Source time="1120" src="loop_52.png" />
+                    <Source time="1140" src="loop_53.png" />
+                    <Source time="1160" src="loop_54.png" />
+                    <Source time="1180" src="loop_55.png" />
+                    <Source time="1200" src="loop_56.png" />
+                    <Source time="1220" src="loop_57.png" />
+                    <Source time="1240" src="loop_58.png" />
+                    <Source time="1260" src="loop_59.png" />
+                    <Source time="1280" src="loop_60.png" />
+                    <Source time="1300" src="loop_61.png" />
+                    <Source time="1320" src="loop_62.png" />
+                    <Source time="1340" src="loop_63.png" />
+                    <Source time="1360" src="loop_64.png" />
+                    <Source time="1380" src="loop_65.png" />
+                    <Source time="1400" src="loop_66.png" />
+                    <Source time="1420" src="loop_67.png" />
+                    <Source time="1440" src="loop_68.png" />
+                    <Source time="1460" src="loop_69.png" />
+                    <Source time="1480" src="loop_70.png" />
+                    <Source time="1500" src="loop_71.png" />
+                    <Source time="1520" src="loop_72.png" />
+                    <Source time="1540" src="loop_73.png" />
+                    <Source time="1560" src="loop_74.png" />
+                    <Source time="1580" src="loop_75.png" />
+                    <Source time="1600" src="loop_76.png" />
+                </SourcesAnimation>
+                <SizeAnimation  repeat="1" delay="0" >
+                    <Size time="0" w="0" h="0" />
+                    <Size time="574" w="708" h="708" />
+                </SizeAnimation>
+            </Image>
+        </Group>
+        <Group name="wireless-mid" visibility="eq(#charge_anim,1)*eq(#charge_type_value,2)*gt(#battery_level,10)*le(#battery_level,20)" >
+            <Image x="#screen_width/6"  y="#screen_height/3" pivotX="354" pivotY="354" align="left" alignV="top" src="loop_0.png" w="708" h="708" >
+                <AlphaAnimation  repeat="1" delay="0" >
+                    <Alpha time="0" a="0" />
+                    <Alpha time="1000" a="255" />
+                </AlphaAnimation>
+                <SourcesAnimation  repeat="0" delay="0" >
+                    <Source time="0" src="loop_0.png" />
+                    <Source time="100" src="loop_1.png" />
+                    <Source time="120" src="loop_2.png" />
+                    <Source time="140" src="loop_3.png" />
+                    <Source time="160" src="loop_4.png" />
+                    <Source time="180" src="loop_5.png" />
+                    <Source time="200" src="loop_6.png" />
+                    <Source time="220" src="loop_7.png" />
+                    <Source time="240" src="loop_8.png" />
+                    <Source time="260" src="loop_9.png" />
+                    <Source time="280" src="loop_10.png" />
+                    <Source time="300" src="loop_11.png" />
+                    <Source time="320" src="loop_12.png" />
+                    <Source time="340" src="loop_13.png" />
+                    <Source time="360" src="loop_14.png" />
+                    <Source time="380" src="loop_15.png" />
+                    <Source time="400" src="loop_16.png" />
+                    <Source time="420" src="loop_17.png" />
+                    <Source time="440" src="loop_18.png" />
+                    <Source time="460" src="loop_19.png" />
+                    <Source time="480" src="loop_20.png" />
+                    <Source time="500" src="loop_21.png" />
+                    <Source time="520" src="loop_22.png" />
+                    <Source time="540" src="loop_23.png" />
+                    <Source time="560" src="loop_24.png" />
+                    <Source time="580" src="loop_25.png" />
+                    <Source time="600" src="loop_26.png" />
+                    <Source time="620" src="loop_27.png" />
+                    <Source time="640" src="loop_28.png" />
+                    <Source time="660" src="loop_29.png" />
+                    <Source time="680" src="loop_30.png" />
+                    <Source time="700" src="loop_31.png" />
+                    <Source time="720" src="loop_32.png" />
+                    <Source time="740" src="loop_33.png" />
+                    <Source time="760" src="loop_34.png" />
+                    <Source time="780" src="loop_35.png" />
+                    <Source time="800" src="loop_36.png" />
+                    <Source time="820" src="loop_37.png" />
+                    <Source time="840" src="loop_38.png" />
+                    <Source time="860" src="loop_39.png" />
+                    <Source time="880" src="loop_40.png" />
+                    <Source time="900" src="loop_41.png" />
+                    <Source time="920" src="loop_42.png" />
+                    <Source time="940" src="loop_43.png" />
+                    <Source time="960" src="loop_44.png" />
+                    <Source time="980" src="loop_45.png" />
+                    <Source time="1000" src="loop_46.png" />
+                    <Source time="1020" src="loop_47.png" />
+                    <Source time="1040" src="loop_48.png" />
+                    <Source time="1060" src="loop_49.png" />
+                    <Source time="1080" src="loop_50.png" />
+                    <Source time="1100" src="loop_51.png" />
+                    <Source time="1120" src="loop_52.png" />
+                    <Source time="1140" src="loop_53.png" />
+                    <Source time="1160" src="loop_54.png" />
+                    <Source time="1180" src="loop_55.png" />
+                    <Source time="1200" src="loop_56.png" />
+                    <Source time="1220" src="loop_57.png" />
+                    <Source time="1240" src="loop_58.png" />
+                    <Source time="1260" src="loop_59.png" />
+                    <Source time="1280" src="loop_60.png" />
+                    <Source time="1300" src="loop_61.png" />
+                    <Source time="1320" src="loop_62.png" />
+                    <Source time="1340" src="loop_63.png" />
+                    <Source time="1360" src="loop_64.png" />
+                    <Source time="1380" src="loop_65.png" />
+                    <Source time="1400" src="loop_66.png" />
+                    <Source time="1420" src="loop_67.png" />
+                    <Source time="1440" src="loop_68.png" />
+                    <Source time="1460" src="loop_69.png" />
+                    <Source time="1480" src="loop_70.png" />
+                    <Source time="1500" src="loop_71.png" />
+                    <Source time="1520" src="loop_72.png" />
+                    <Source time="1540" src="loop_73.png" />
+                    <Source time="1560" src="loop_74.png" />
+                    <Source time="1580" src="loop_75.png" />
+                    <Source time="1600" src="loop_76.png" />
+                </SourcesAnimation>
+                <SizeAnimation  repeat="1" delay="0" >
+                    <Size time="0" w="0" h="0" />
+                    <Size time="574" w="708" h="708" />
+                </SizeAnimation>
+            </Image>
+        </Group>
+        <Group name="wireless-high" visibility="eq(#charge_anim,1)*eq(#charge_type_value,2)*gt(#battery_level,20)" >
+            <Image x="#screen_width/6"  y="#screen_height/3" pivotX="354" pivotY="354" align="left" alignV="top" src="loop_0.png" w="708" h="708" >
+                <AlphaAnimation  repeat="1" delay="0" >
+                    <Alpha time="0" a="0" />
+                    <Alpha time="1000" a="255" />
+                </AlphaAnimation>
+                <SourcesAnimation  repeat="0" delay="0" >
+                    <Source time="0" src="loop_0.png" />
+                    <Source time="100" src="loop_1.png" />
+                    <Source time="120" src="loop_2.png" />
+                    <Source time="140" src="loop_3.png" />
+                    <Source time="160" src="loop_4.png" />
+                    <Source time="180" src="loop_5.png" />
+                    <Source time="200" src="loop_6.png" />
+                    <Source time="220" src="loop_7.png" />
+                    <Source time="240" src="loop_8.png" />
+                    <Source time="260" src="loop_9.png" />
+                    <Source time="280" src="loop_10.png" />
+                    <Source time="300" src="loop_11.png" />
+                    <Source time="320" src="loop_12.png" />
+                    <Source time="340" src="loop_13.png" />
+                    <Source time="360" src="loop_14.png" />
+                    <Source time="380" src="loop_15.png" />
+                    <Source time="400" src="loop_16.png" />
+                    <Source time="420" src="loop_17.png" />
+                    <Source time="440" src="loop_18.png" />
+                    <Source time="460" src="loop_19.png" />
+                    <Source time="480" src="loop_20.png" />
+                    <Source time="500" src="loop_21.png" />
+                    <Source time="520" src="loop_22.png" />
+                    <Source time="540" src="loop_23.png" />
+                    <Source time="560" src="loop_24.png" />
+                    <Source time="580" src="loop_25.png" />
+                    <Source time="600" src="loop_26.png" />
+                    <Source time="620" src="loop_27.png" />
+                    <Source time="640" src="loop_28.png" />
+                    <Source time="660" src="loop_29.png" />
+                    <Source time="680" src="loop_30.png" />
+                    <Source time="700" src="loop_31.png" />
+                    <Source time="720" src="loop_32.png" />
+                    <Source time="740" src="loop_33.png" />
+                    <Source time="760" src="loop_34.png" />
+                    <Source time="780" src="loop_35.png" />
+                    <Source time="800" src="loop_36.png" />
+                    <Source time="820" src="loop_37.png" />
+                    <Source time="840" src="loop_38.png" />
+                    <Source time="860" src="loop_39.png" />
+                    <Source time="880" src="loop_40.png" />
+                    <Source time="900" src="loop_41.png" />
+                    <Source time="920" src="loop_42.png" />
+                    <Source time="940" src="loop_43.png" />
+                    <Source time="960" src="loop_44.png" />
+                    <Source time="980" src="loop_45.png" />
+                    <Source time="1000" src="loop_46.png" />
+                    <Source time="1020" src="loop_47.png" />
+                    <Source time="1040" src="loop_48.png" />
+                    <Source time="1060" src="loop_49.png" />
+                    <Source time="1080" src="loop_50.png" />
+                    <Source time="1100" src="loop_51.png" />
+                    <Source time="1120" src="loop_52.png" />
+                    <Source time="1140" src="loop_53.png" />
+                    <Source time="1160" src="loop_54.png" />
+                    <Source time="1180" src="loop_55.png" />
+                    <Source time="1200" src="loop_56.png" />
+                    <Source time="1220" src="loop_57.png" />
+                    <Source time="1240" src="loop_58.png" />
+                    <Source time="1260" src="loop_59.png" />
+                    <Source time="1280" src="loop_60.png" />
+                    <Source time="1300" src="loop_61.png" />
+                    <Source time="1320" src="loop_62.png" />
+                    <Source time="1340" src="loop_63.png" />
+                    <Source time="1360" src="loop_64.png" />
+                    <Source time="1380" src="loop_65.png" />
+                    <Source time="1400" src="loop_66.png" />
+                    <Source time="1420" src="loop_67.png" />
+                    <Source time="1440" src="loop_68.png" />
+                    <Source time="1460" src="loop_69.png" />
+                    <Source time="1480" src="loop_70.png" />
+                    <Source time="1500" src="loop_71.png" />
+                    <Source time="1520" src="loop_72.png" />
+                    <Source time="1540" src="loop_73.png" />
+                    <Source time="1560" src="loop_74.png" />
+                    <Source time="1580" src="loop_75.png" />
+                    <Source time="1600" src="loop_76.png" />
+                </SourcesAnimation>
+                <SizeAnimation  repeat="1" delay="0" >
+                    <Size time="0" w="0" h="0" />
+                    <Size time="574" w="708" h="708" />
+                </SizeAnimation>
+            </Image>
+        </Group>
+        <Group name="charge-info" visibility="eq(#charge_anim,1)" >
+            <Text name="charge-status1" x="284"  y="644" align="center" alignV="center" color="#E1BB76" size="45"  
+            text="Charged" category="BatteryFull"/>
+            <Text name="charge-status2" x="284"  y="644" align="center" alignV="center" color="#E1BB76" size="45"  
+            text="#charge_info" category="Charging"/>
+            <Text name="charge-status3" x="284"  y="644" align="center" alignV="center" color="#E1BB76" size="45"  
+            text="Low Battery！" category="BatteryLow"/>
+            <Image src="ic_charge_standard.png" name="charge-icon1" x="360"  y="#screen_height/2-36" pivotX="0" pivotY="0" w="72" h="72" align="center" alignV="center"  visibility="eq(#charge_anim,1)*eq(#charge_type_value,1)*eq(#charge_mode_value,1)"/>
+            <Image src="ic_charge_quick.png" name="charge-icon2" x="360"  y="#screen_height/2-36" pivotX="0" pivotY="0" w="72" h="72" align="center" alignV="center"  visibility="eq(#charge_anim,1)*eq(#charge_type_value,1)*eq(#charge_mode_value,2)"/>
+            <Image src="ic_charge_super_v.png" name="charge-icon3" x="360"  y="#screen_height/2-36" pivotX="0" pivotY="0" w="72" h="72" align="center" alignV="center"  visibility="eq(#charge_anim,1)*eq(#charge_type_value,1)*eq(#charge_mode_value,3)"/>
+            <Image src="ic_charge_standard_wireless.png" name="charge-icon4" x="360"  y="#screen_height/2-36" pivotX="0" pivotY="0" w="72" h="72" align="center" alignV="center"  
+                visibility="eq(#charge_anim,1)*eq(#charge_type_value,2)*eq(#charge_mode_value,4)"/>
+            <Image src="ic_charge_quick_wireless.png" name="charge-icon5" x="360"  y="#screen_height/2-36" pivotX="0" pivotY="0" w="72" h="72" align="center" alignV="center"  
+                visibility="eq(#charge_anim,1)*eq(#charge_type_value,2)*eq(#charge_mode_value,5)"/>
+            <Image src="ic_charge_super_wireless.png" name="charge-icon6" x="360"  y="#screen_height/2-36" pivotX="0" pivotY="0" w="72" h="72" align="center" alignV="center"  
+                visibility="eq(#charge_anim,1)*eq(#charge_type_value,2)*eq(#charge_mode_value,6)"/>
+            <Text name="charge-level" text="#charge_level + '%'" size="105" x="540"  y="#screen_height/2-36" align="center" alignV="center" pivotX="210" pivotY="70" color="#ffffff"  visibility="eq(#charge_anim,1)*eq(#charge_type_value,1)*gt(#battery_level,20)" />
+            <Text name="charge-super1" text="#super_charge" size="1" x="3000"  y="-616" align="center" alignV="center" color="#FFFFFF" pivotX="NaN" pivotY="NaN"  
+                visibility="(eq(#charge_mode_value,3)+eq(#charge_mode_value,6))*le(#charge_power_value,3)" />
+            <Text name="charge-super2" text="#super_charge" size="1" x="3000"  y="-616" align="center" alignV="center" color="#FFFFFF" pivotX="NaN" pivotY="NaN"  
+                visibility="(eq(#charge_mode_value,3)+eq(#charge_mode_value,6))*eq(#charge_power_value,3)">
+                <SizeAnimation repeat="1">
+                    <Size w="0" h="0" time="0"/>
+                    <Size w="72" h="72" time="574"/>
+                </SizeAnimation>
+                <AlphaAnimation repeat="1">
+                    <Alpha a="0" time="3450"/>
+                    <Alpha a="255" time="4000"/>
+                </AlphaAnimation>
+            </Text>
+            <Text name="charge-powerlevel1" text="#charge_max_power" size="1" x="3000"  y="-3000" align="center" alignV="center" pivotX="2" pivotY="4" color="#FFFFFF"  
+                visibility="eq(#charge_anim,1)*gt(#charge_power_value,0)*le(#charge_power_value,3)"/>
+            <Rectangle name="charge-powerlevel2" x="3000"  y="-3000" w="52" h="8" pivotX="26" pivotY="4" cornerRadius="10,10" strokeColor="#FFFFFF" weight="5" fillColor="#00FFFFFF" align="center" alignV="center"  
+                visibility="eq(#charge_anim,1)*gt(#charge_power_value,0)*le(#charge_power_value,3)"/>
+            <Text name="charge-powerlevel3" text="#charge_max_power" size="1" x="3000"  y="-3000" align="center" alignV="center" pivotX="2" pivotY="4" color="#FFFFFF"  visibility="eq(#charge_anim,1)*eq(#charge_power_value,3)">
+                <SizeAnimation repeat="1">
+                    <Size w="3" h="7" time="0"/>
+                    <Size w="5" h="10" time="500"/>
+                    <Size w="5" h="10" time="3450"/>
+                    <Size w="4" h="8" time="4000"/>
+                </SizeAnimation>
+            </Text>
+            <Rectangle name="charge-powerlevel4" x="3000"  y="-3000" w="52" h="8" pivotX="26" pivotY="4" cornerRadius="10,10" strokeColor="#FFFFFF" weight="5" fillColor="#00FFFFFF" align="center" alignV="center"  visibility="eq(#charge_anim,1)*eq(#charge_power_value,3)">
+                <SizeAnimation repeat="1">
+                    <Size w="46" h="7" time="0"/>
+                    <Size w="67" h="10" time="500"/>
+                    <Size w="67" h="10" time="3450"/>
+                    <Size w="52" h="8" time="4000"/>
+                </SizeAnimation>
+            </Rectangle>
+        </Group>
+    </Group>
+</Lockscreen>

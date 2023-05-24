@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<HWTheme>
+<item style="slide"></item>
+<item package="com.huawei.ucdlockscreen"></item>
+<item dynamicPath="lockscreen"></item>
+<item minversion="2.0.24"></item>
+<item title-cn="香菱"></item>
+<item title="XiangLing Themes"></item>
+<item maxHeight="2160"></item>
+<item baseVersion="6.0"></item>
+<item engineType="HWThemeEngine"></item>
+<item supportChargingAnim="true"></item>
+</HWTheme>
